@@ -117,11 +117,25 @@ define(function() {
     },
 
     square : function(arr) {
+        var result = [];
 
+        result = arr.map(function(current, index) {
+            return current * current;
+        });
+
+        return result;
     },
 
     findAllOccurrences : function(arr, target) {
+        var result = [];
 
+        arr.forEach(function(val, index) {
+            if (val === target) {
+                result.push(index);
+            }
+        });
+
+        return result;
     }
   };
 });
